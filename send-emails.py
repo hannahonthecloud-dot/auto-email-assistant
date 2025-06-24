@@ -1,3 +1,7 @@
+# ==========================
+# Step 1: Authenticate with Google APIs
+# ==========================
+
 import os
 import base64
 from email.mime.text import MIMEText
