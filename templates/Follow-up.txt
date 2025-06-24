@@ -1,0 +1,14 @@
+Subject: Following up on the {{role}} position at {{company}}
+
+Hi {{recruiter_name}},
+
+I hope you’re doing well. I wanted to follow up on my application for the {{role}} role at {{company}}.
+
+I’m still very interested in joining your team and contributing my growing experience in Cloud and DevOps. I’ve been working on real-world projects that involve automating deployments and improving system reliability — areas I know are important at {{company}}.
+
+If there’s anything I can provide to support the process, I’d be happy to.
+
+Thank you again for your time, and I look forward to hearing from you.
+
+Best regards,  
+Ngozi Hannah Opara

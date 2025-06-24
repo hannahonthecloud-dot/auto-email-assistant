@@ -1,0 +1,12 @@
+Subject: Thank you for the opportunity at {{company}}
+
+Hi {{recruiter_name}},
+
+Thank you for the chance to speak with you about the {{role}} role at {{company}}. I enjoyed our conversation and learning more about your team and the work you do.
+
+The discussion made me even more excited about the opportunity to apply my DevOps and Cloud skills to real challenges. I’m especially drawn to how {{company}} is building reliable systems that scale, and I’d love to be a part of that.
+
+Please feel free to reach out if you need anything else from me.
+
+Warm regards,  
+Ngozi Hannah Opara

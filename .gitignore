@@ -1,0 +1,6 @@
+# Ignore credentials
+token.json
+client_secret_101.json
+
+# Ignore virtual environment
+myemailprojectenv/
