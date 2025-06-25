@@ -4,6 +4,7 @@
 
 import os
 import base64
+import json
 from email.mime.text import MIMEText
 from email.message import EmailMessage
 
@@ -37,19 +38,25 @@ creds = None
 # The file token.json stores the user's access and refresh tokens, and is
 # created automatically when the authorization flow completes for the first
 # time.
-if os.path.exists('token.json'):
-    creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+token_content = os.getenv('GOOGLE_TOKEN')
+
+if token_content:
+    creds = Credentials.from_authorized_user_info(json.loads(token_content), SCOPES)
+else:
+    raise Exception("GOOGLE_TOKEN not found in environment.")
+# if os.path.exists('token.json'):
+    # creds = Credentials.from_authorized_user_file('token.json', SCOPES)
 
 # If there are no (valid) credentials available, let the user log in.
-if not creds or not creds.valid:
-    if creds and creds.expired and creds.refresh_token:
-        creds.refresh(Request())
-    else:
-        flow = InstalledAppFlow.from_client_secrets_file(
-            CLIENT_SECRET_FILE, SCOPES)
+# if not creds or not creds.valid:
+    # if creds and creds.expired and creds.refresh_token:
+        # creds.refresh(Request())
+    # else:
+        # flow = InstalledAppFlow.from_client_secrets_file(
+            # CLIENT_SECRET_FILE, SCOPES)
         
         # Uncomment the next line to use the local server flow
-        creds = flow.run_local_server(port=0)
+        #creds = flow.run_local_server(port=0)
         # Uncomment the next line to use the console flow
         # flow.run_console()
         # Uncomment the next line to use the manual authorization flow
