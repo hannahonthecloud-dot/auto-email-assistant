@@ -71,11 +71,11 @@ else:
         # code = input("Enter the authorization code: ")
         # flow.fetch_token(code=code)
 
-        creds = flow.credentials
+        # creds = flow.credentials
 
     # Save the credentials for the next run
-    with open('token.json', 'w') as token:
-        token.write(creds.to_json())
+    # with open('token.json', 'w') as token:
+        # token.write(creds.to_json())
 
 service_gmail = build('gmail', 'v1', credentials=creds)
 
