@@ -49,19 +49,20 @@ if not creds or not creds.valid:
             CLIENT_SECRET_FILE, SCOPES)
         
         # Uncomment the next line to use the local server flow
-        # flow.run_local_server(port=0)
+        creds = flow.run_local_server(port=0)
         # Uncomment the next line to use the console flow
         # flow.run_console()
         # Uncomment the next line to use the manual authorization flow
         # Note: The manual authorization flow requires user interaction to
         # authorize the application and obtain the authorization code.
         # This is useful for environments where a web browser is not available.
-        # ✅ Manual authorization flow
-        flow.redirect_uri = 'urn:ietf:wg:oauth:2.0:oob'
-        auth_url, _ = flow.authorization_url(prompt='consent')
-        print(f"Please go to this URL: {auth_url}")
-        code = input("Enter the authorization code: ")
-        flow.fetch_token(code=code)
+
+        # Manual authorization flow. Uncomment this part if running on WSL
+        # flow.redirect_uri = 'urn:ietf:wg:oauth:2.0:oob'
+        # auth_url, _ = flow.authorization_url(prompt='consent')
+        # print(f"Please go to this URL: {auth_url}")
+        # code = input("Enter the authorization code: ")
+        # flow.fetch_token(code=code)
 
         creds = flow.credentials
 
